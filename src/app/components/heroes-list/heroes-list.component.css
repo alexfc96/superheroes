@@ -1,3 +1,7 @@
+.search-container {
+    margin-bottom: 20px;
+}
+
 .mat-card-list {
     display: flex;
     justify-content: center;

@@ -1,5 +1,11 @@
 <h1>List</h1>
 
+<div class="search-container">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Filter by name" [(ngModel)]="searchHeroName" (ngModelChange)="onFilterChange($event)">
+  </mat-form-field>
+</div>
+
 <div class="mat-card-list">
   @for (heroe of heroes; track heroe.id) {
     <mat-card class="mat-card">
