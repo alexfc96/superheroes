@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common'
 import { Hero } from '../../heroes';
 import { SuperHeroesService } from '../../services/service';
 import {MatCardModule} from '@angular/material/card';
@@ -6,7 +7,7 @@ import {MatCardModule} from '@angular/material/card';
 @Component({
   selector: 'heroes-list',
   standalone: true,
-  imports: [MatCardModule],
+  imports: [MatCardModule, NgOptimizedImage],
   templateUrl: './heroes-list.component.html',
   styleUrls: ['./heroes-list.component.css']
 })

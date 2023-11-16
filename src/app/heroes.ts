@@ -22,7 +22,7 @@ const heroes: Hero[] = [
     id: 3,
     name: "Batman",
     powers: "Intelligence, physical training, technology",
-    image: "https://assetsio.reedpopcdn.com/digitalfoundry-2016-batman-return-to-arkham-face-off-1477586823333.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    image: "https://img2.rtve.es/i/?w=1600&i=1371454504089.jpg",
 },
 ];
 
