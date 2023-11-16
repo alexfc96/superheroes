@@ -1,2 +1,7 @@
 <h1>Superheroes</h1>
+<ul>
+  <li *ngFor="let hero of heroes">
+    <a href="#">{{hero.name}}</a>
+  </li>
+</ul>
 <router-outlet></router-outlet>
