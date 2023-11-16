@@ -16,4 +16,8 @@ export class SuperHeroesService {
   getHeroeById(id: number): Hero | undefined {
     return this.heroes.find((heroe) => heroe.id === id);
   }
+
+  getHeroesByName(name: string): Hero[] {
+    return this.heroes.filter((heroe) => heroe.name.toLowerCase().includes(name.toLowerCase()));
+  }
 }
