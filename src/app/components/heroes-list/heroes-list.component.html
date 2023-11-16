@@ -16,6 +16,9 @@
         <h2>{{heroe.name}}</h2>
         <p>{{heroe.powers}}</p>
       </mat-card-content>
+      <mat-card-actions class="mat-card-actions">
+        <button mat-button (click)="onRemove(heroe)">Remove</button>
+      </mat-card-actions>
     </mat-card>
   }
 </div>

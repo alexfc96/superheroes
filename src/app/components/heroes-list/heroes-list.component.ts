@@ -33,4 +33,8 @@ export class HeroesListComponent implements OnInit {
   onFilterChange(name: string) {
     this.heroes = this.service.getHeroesByName(name);
   }
+
+  onRemove(heroe: Hero) {
+    this.service.removeHeroe(heroe.id);
+  }
 }

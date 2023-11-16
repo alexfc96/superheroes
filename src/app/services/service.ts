@@ -20,4 +20,9 @@ export class SuperHeroesService {
   getHeroesByName(name: string): Hero[] {
     return this.heroes.filter((heroe) => heroe.name.toLowerCase().includes(name.toLowerCase()));
   }
+
+  removeHeroe(id: number): void {
+    const index = this.heroes.findIndex((h) => h.id === id);
+    this.heroes.splice(index, 1);
+  }
 }
