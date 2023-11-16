@@ -1,23 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { Hero } from './heroes';
-import { SuperHeroesService } from './services/service';
+import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, HeroesListComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'superheroes';
-  heroes: Hero[] = [];
 
-  constructor(private service: SuperHeroesService) {}
-
-  ngOnInit() {
-    this.heroes = this.service.getHeroes();
-  }
+  constructor() {}
 }
