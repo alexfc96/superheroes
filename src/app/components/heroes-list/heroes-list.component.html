@@ -2,11 +2,11 @@
 
 <div class="mat-card-list">
   @for (heroe of heroes; track heroe.id) {
-    <mat-card>
-      <mat-card-header>
-        <img src="{{heroe.image}}" alt="{{heroe.name}}">
+    <mat-card class="mat-card">
+      <mat-card-header class="mat-card-header">
+        <img src="{{heroe.image}}" alt="{{heroe.name}}" class="img-hero">
       </mat-card-header>
-      <mat-card-content>
+      <mat-card-content class="mat-card-content">
         <h2>{{heroe.name}}</h2>
         <p>{{heroe.powers}}</p>
       </mat-card-content>
