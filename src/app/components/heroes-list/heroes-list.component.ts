@@ -51,7 +51,9 @@ export class HeroesListComponent implements OnInit {
   }
 
   onRemove(hero: Hero) {
-    //aply verification
-    this.service.removeHero(hero.id);
+    const confirm = window.confirm('Are you sure you want to delete ' + hero.name + '?');
+    if (confirm) {
+      this.service.removeHero(hero.id);
+    }
   }
 }
