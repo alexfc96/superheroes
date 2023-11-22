@@ -20,6 +20,7 @@ export class HeroesListComponent implements OnInit {
   heroes: Hero[] = [];
   selectedHero: Hero | undefined;
   searchHeroName: string = '';
+  newHero: boolean = false;
 
   constructor(private service: SuperHeroesService) {}
 
@@ -35,12 +36,17 @@ export class HeroesListComponent implements OnInit {
     this.heroes = this.service.getHeroesByName(name);
   }
 
+  createHero() {
+    this.newHero = true
+  }
+
   onEdit(hero: Hero) {
     this.selectedHero = hero;
   }
 
   unselectHero() {
     this.selectedHero = undefined;
+    this.newHero = false;
   }
 
   onRemove(hero: Hero) {
