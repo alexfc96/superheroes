@@ -4,6 +4,12 @@ export interface Hero {
     name: string;
     powers: string;
 }
+
+export interface NewHero {
+    image: string;
+    name: string;
+    powers: string;
+}
   
 const heroes: Hero[] = [
 {
