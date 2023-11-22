@@ -5,7 +5,7 @@
 </div>
 
 @if (selectedHero) {
-  <hero-form [hero]="selectedHero" />
+  <hero-form [hero]="selectedHero" (onCompleteForm)="unselectHero()" />
 }
 
 <div class="mat-card-list">

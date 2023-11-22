@@ -37,11 +37,14 @@ export class HeroesListComponent implements OnInit {
 
   onEdit(hero: Hero) {
     this.selectedHero = hero;
-    // this.service.updateHero(this.selectedHero)
+  }
+
+  unselectHero() {
+    this.selectedHero = undefined;
   }
 
   onRemove(hero: Hero) {
-    //aply verication
+    //aply verification
     this.service.removeHero(hero.id);
   }
 }

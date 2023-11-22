@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from "@angular/forms";
 import { Hero, NewHero } from "../../heroes";
 import { SuperHeroesService } from "../../services/service";
@@ -12,6 +12,7 @@ import { SuperHeroesService } from "../../services/service";
 })
 export class HeroFormComponent implements OnInit {
   @Input() hero: Hero | undefined;
+  @Output() onCompleteForm = new EventEmitter<any>();
 
   // Form group
   heroForm = new FormGroup({
@@ -52,7 +53,8 @@ export class HeroFormComponent implements OnInit {
       this.service.addHero(newHero);
     }
   
-    this.heroForm.reset();
+    this.resetForm();
+    this.onCompleteForm.emit();
   }
   
   resetForm() {
