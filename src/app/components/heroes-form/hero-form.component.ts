@@ -34,27 +34,27 @@ export class HeroFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("onSubmit", this.heroForm);
-  
-    if(this.hero) {
-      const newHero: Hero = {
-        id: this.hero.id,
-        name: this.heroForm.value.name ?? "",
-        powers: this.heroForm.value.powers ?? "",
-        image: this.heroForm.value.image ?? "",
-      };
-      this.service.updateHero(newHero)
-    } else {
-      const newHero: NewHero = {
-        name: this.heroForm.value.name ?? "",
-        powers: this.heroForm.value.powers ?? "",
-        image: this.heroForm.value.image ?? "",
+    if(this.heroForm.valid) {
+      if(this.hero) {
+        const newHero: Hero = {
+          id: this.hero.id,
+          name: this.heroForm.value.name ?? "",
+          powers: this.heroForm.value.powers ?? "",
+          image: this.heroForm.value.image ?? "",
+        };
+        this.service.updateHero(newHero)
+      } else {
+        const newHero: NewHero = {
+          name: this.heroForm.value.name ?? "",
+          powers: this.heroForm.value.powers ?? "",
+          image: this.heroForm.value.image ?? "",
+        }
+        this.service.addHero(newHero);
       }
-      this.service.addHero(newHero);
+
+      this.onCompleteForm.emit();
+      // this.resetForm();
     }
-  
-    this.resetForm();
-    this.onCompleteForm.emit();
   }
   
   resetForm() {
