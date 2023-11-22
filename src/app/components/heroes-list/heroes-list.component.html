@@ -7,17 +7,18 @@
 </div>
 
 <div class="mat-card-list">
-  @for (heroe of heroes; track heroe.id) {
+  @for (hero of heroes; track hero.id) {
     <mat-card class="mat-card">
       <mat-card-header class="mat-card-header">
-        <img src="{{heroe.image}}" alt="{{heroe.name}}" class="img-hero">
+        <img src="{{hero.image}}" alt="{{hero.name}}" class="img-hero">
       </mat-card-header>
       <mat-card-content class="mat-card-content">
-        <h2>{{heroe.name}}</h2>
-        <p>{{heroe.powers}}</p>
+        <h2>{{hero.name}}</h2>
+        <p>{{hero.powers}}</p>
       </mat-card-content>
       <mat-card-actions class="mat-card-actions">
-        <button mat-button (click)="onRemove(heroe)">Remove</button>
+        <button mat-button (click)="onEdit(hero)">Edit</button>
+        <button mat-button (click)="onRemove(hero)">Remove</button>
       </mat-card-actions>
     </mat-card>
   }

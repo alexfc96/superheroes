@@ -34,7 +34,13 @@ export class HeroesListComponent implements OnInit {
     this.heroes = this.service.getHeroesByName(name);
   }
 
-  onRemove(heroe: Hero) {
-    this.service.removeHeroe(heroe.id);
+  onEdit(hero: Hero) {
+    this.selectedHero = hero;
+    // this.service.updateHero(this.selectedHero)
+  }
+
+  onRemove(hero: Hero) {
+    //aply verication
+    this.service.removeHero(hero.id);
   }
 }
