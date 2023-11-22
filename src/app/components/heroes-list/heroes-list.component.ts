@@ -3,6 +3,7 @@ import { NgOptimizedImage, CommonModule } from '@angular/common'
 import { Hero } from '../../heroes';
 import { SuperHeroesService } from '../../services/service';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
@@ -12,7 +13,7 @@ import { HeroFormComponent } from '../heroes-form/hero-form.component';
 @Component({
   selector: 'heroes-list',
   standalone: true,
-  imports: [MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule ,NgOptimizedImage, FormsModule, HeroFormComponent, CommonModule],
+  imports: [MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule ,NgOptimizedImage, FormsModule, HeroFormComponent, CommonModule, MatButtonModule],
   templateUrl: './heroes-list.component.html',
   styleUrls: ['./heroes-list.component.css']
 })

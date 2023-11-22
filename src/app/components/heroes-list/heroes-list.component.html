@@ -1,7 +1,5 @@
 <div class="search-container">
-  <button type="button" class="btn" (click)="createHero()">
-    New hero
-  </button>
+  <button mat-raised-button (click)="createHero()">New hero</button>
   <mat-form-field>
     <input matInput type="text" placeholder="Filter by name" [(ngModel)]="searchHeroName" (ngModelChange)="onFilterChange($event)">
   </mat-form-field>

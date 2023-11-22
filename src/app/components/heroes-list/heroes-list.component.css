@@ -1,9 +1,15 @@
 .search-container {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8vh;
+    margin-right: 8vh;
 }
 
 .mat-card-list {
     display: flex;
+    flex-wrap: wrap; /* Wrap cards onto multiple lines */
     justify-content: center;
 }
 
